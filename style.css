@@ -1,0 +1,15 @@
+/* class selector  */
+.text {
+  font-size: 20px;
+  color: red;
+}
+
+/* id selector  */
+#myText {
+  color: aquamarine;
+}
+
+/* element selector  */
+p {
+  color: blue;
+}
