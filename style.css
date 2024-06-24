@@ -1,14 +1,22 @@
 #bg {
   height: 100vh;
   padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
+  width: full;
+  margin: auto;
 }
 
 #content {
-  background-color: burlywood;
-  height: 70%;
-  width: 20%;
-  overflow: auto;
+  border: 1px solid black;
+  width: 500px;
+}
+
+.text {
+  color: black;
+  text-indent: 25px;
+}
+
+span {
+  font-size: 24px;
+  font-weight: 800;
 }
