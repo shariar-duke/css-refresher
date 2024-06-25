@@ -1,18 +1,8 @@
 #bg {
   height: 100vh;
-  padding: 30px;
-  margin: auto;
   width: full;
-  margin: auto;
-}
-
-#content {
-  border: 1px solid black;
-  width: 500px;
-}
-
-.text {
-  color: black;
-  font-size: 40px;
-  text-shadow: 5px 0px 5px black;
+  background-image: url("./images/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(4px);
 }
