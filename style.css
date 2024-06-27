@@ -1,6 +1,6 @@
 .bg {
   width: full;
-  height: 100vh;
+  height: 200vh;
 }
 
 #parent {
@@ -15,14 +15,16 @@
   display: inline-block;
   margin-left: 20px;
 }
+
+/* This div is for position fixed  */
 #two {
   width: 100px;
   height: 100px;
   background-color: green;
   display: inline-block;
-  position: relative;
-  margin-top: 120px; /* Move the element down by 120px */
-  margin-left: 80px;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
 }
 
 #three {
@@ -30,5 +32,5 @@
   height: 100px;
   background-color: black;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
 }
