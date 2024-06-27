@@ -1,36 +1,20 @@
 .bg {
-  width: full;
-  height: 200vh;
+  width: 100%; /* Full width of the container */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Height of the container */
 }
 
-#parent {
-  border: 1px solid red;
-  padding: 20px;
-}
-
-#one {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  display: inline-block;
-  margin-left: 20px;
-}
-
-/* This div is for position fixed  */
-#two {
-  width: 100px;
-  height: 100px;
+#wrapper {
+  height: 300px;
+  width: 380px;
   background-color: green;
   display: inline-block;
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
 }
 
-#three {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  display: inline-block;
-  margin-left: 10px;
+#wrapper:hover {
+  transform: translateY(-8px) scale(1.1); /* Move 2px upward and scale up */
 }
