@@ -7,6 +7,7 @@
   width: 70%;
   float: left;
   background-color: aliceblue;
+  padding: 12px;
 }
 
 #div2 {
@@ -15,7 +16,10 @@
   background-color: rosybrown;
 }
 
-@media screen and (min-width: 528px) {
+@media screen and (max-width: 700px) {
+  .bg {
+    padding: 12px;
+  }
   #div1 {
     width: 50%;
   }
@@ -23,14 +27,9 @@
   #div2 {
     width: 50%;
   }
-}
 
-@media screen and (max-width: 728px) {
-  #div1 {
-    width: 30%;
-  }
-
-  #div2 {
-    width: 70%;
+  img {
+    width: 100%;
+    height: auto;
   }
 }
