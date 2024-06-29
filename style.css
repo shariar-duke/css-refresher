@@ -2,19 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+  text-align: center;
+  font-size: 26px;
 }
 
-.container {
-  min-height: 100vh;
+body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+.header {
+  height: 80px;
+  background-color: gray;
+}
+.example {
+  background-color: rgb(33, 37, 46);
+  flex: 1;
+}
+
 .footer {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  width: 100%; /* Make sure the footer spans the full width */
-  text-align: center;
-  margin-top: auto; /* Pushes the footer to the bottom */
+  height: 80px;
+  background-color: gray;
 }
