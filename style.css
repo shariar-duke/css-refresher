@@ -3,9 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
   min-height: 100vh;
-  text-align: center;
   display: flex;
   flex-direction: column;
 }
@@ -14,6 +14,7 @@
   background-color: black;
   color: white;
   padding: 20px;
-  margin: auto;
-  width: full;
+  width: 100%; /* Make sure the footer spans the full width */
+  text-align: center;
+  margin-top: auto; /* Pushes the footer to the bottom */
 }
