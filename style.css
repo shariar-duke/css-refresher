@@ -1,35 +1,37 @@
-.bg {
-  /* Full width of the container */
+.grid-container {
+  background-color: brown;
   height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header header header header header "
+    "menu main main main right right"
+    "footer footer footer footer footer footer";
+
+  grid-template-rows: 1fr 5fr 2fr;
 }
 
-#div1 {
-  width: 70%;
-  float: left;
-  background-color: aliceblue;
-  padding: 12px;
+.grid-item {
+  background-color: wheat;
+  border: 1px solid black;
+  padding: 20px;
 }
 
-#div2 {
-  width: 30%;
-  float: left;
-  background-color: rosybrown;
+#grid-1 {
+  grid-area: header;
 }
 
-@media screen and (max-width: 700px) {
-  .bg {
-    padding: 12px;
-  }
-  #div1 {
-    width: 50%;
-  }
+#grid-2 {
+  grid-area: menu;
+}
 
-  #div2 {
-    width: 50%;
-  }
+#grid-3 {
+  grid-area: main;
+}
 
-  img {
-    width: 100%;
-    height: auto;
-  }
+#grid-4 {
+  grid-area: right;
+}
+
+#grid-5 {
+  grid-area: footer;
 }
