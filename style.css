@@ -1,8 +1,15 @@
 body {
-  background-image: url("./images/bg2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100vh;
-  /* background-attachment: fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  filter: brightness(0.5);
+  transition: filter 0.4s;
+}
+
+img:hover {
+  filter: brightness(1);
 }
