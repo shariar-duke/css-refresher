@@ -1,10 +1,9 @@
 .grid-container {
-  background-color: brown;
   height: 100vh;
   display: grid;
   grid-template-areas:
     "header header header header header header "
-    "menu main main main right right"
+    "menu main main main main main"
     "footer footer footer footer footer footer";
 
   grid-template-rows: 1fr 5fr 2fr;
