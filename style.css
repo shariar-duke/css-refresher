@@ -1,56 +1,52 @@
-.container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Responsive grid with minimum width of 300px */
-  gap: 20px; /* Gap between grid items */
-  max-width: 1200px;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+h2 {
+  margin-bottom: 6px;
 }
 
 .card {
   background-color: #fff;
+  width: 400px;
+  padding: 22px 30px;
   border-radius: 5px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Align items with space between them */
-  padding: 20px; /* Example padding */
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px 5px 0 0; /* Rounded corners for top only */
+#check {
+  display: none;
 }
 
-.card .heading {
-  font-size: 1.5rem; /* Example font size */
-  margin-top: 10px; /* Example margin */
-}
-
-.card .description {
-  line-height: 1.6; /* Example line height */
-  overflow: hidden; /* Hide overflow content */
-  text-overflow: ellipsis; /* Truncate text with ... when overflow */
-  display: -webkit-box;
-  -webkit-line-clamp: 5; /* Number of lines to show */
-  -webkit-box-orient: vertical;
-}
-
-.btn {
-  margin-top: auto; /* Align button to bottom of card */
-  background-color: green;
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-  border: none;
+label {
+  display: inline-block;
+  margin: 10px 0px;
   cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  color: white;
+  background-color: rgb(72, 113, 97);
+  padding: 4px 12px;
+  border-radius: 3px;
 }
 
-.btn:hover {
-  background-color: darkgreen;
+.content {
+  display: none;
+}
+
+/* check box and content holo sibling tai ei syntax lekha jay  */
+#check:checked ~ .content {
+  display: block;
+}
+
+/* checkbox input and lable o eki level a ase mane sibling  */
+#check:checked ~ label {
+  display: none;
 }
