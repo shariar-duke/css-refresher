@@ -1,19 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 800; /* Bold style */
-}
-
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive grid with minimum width of 300px */
+  gap: 20px; /* Gap between grid items */
   max-width: 1200px;
   margin: 0 auto;
-  gap: 20px;
 }
 
 .card {
@@ -22,28 +15,42 @@ body {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  flex: 1; /* Ensures all cards grow to fill available space */
+  justify-content: space-between; /* Align items with space between them */
+  padding: 20px; /* Example padding */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0; /* Rounded corners for top only */
+}
+
+.card .heading {
+  font-size: 1.5rem; /* Example font size */
+  margin-top: 10px; /* Example margin */
+}
+
+.card .description {
+  line-height: 1.6; /* Example line height */
   overflow: hidden; /* Hide overflow content */
-  padding: 10px 40px;
-  gap: 12px;
-}
-
-img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-}
-
-/* Multi-line text truncation */
-.description {
+  text-overflow: ellipsis; /* Truncate text with ... when overflow */
   display: -webkit-box;
+  -webkit-line-clamp: 5; /* Number of lines to show */
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 8; /* Number of lines to show before truncating */
-  text-overflow: ellipsis;
 }
 
-/* this is important to place the button at the very bottom */
 .btn {
-  margin-top: auto;
+  margin-top: auto; /* Align button to bottom of card */
+  background-color: green;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: darkgreen;
 }
