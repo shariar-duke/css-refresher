@@ -1,15 +1,27 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-img {
+  background-image: url("./images/bg3.jpg");
+  background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
 }
 
-img {
-  filter: brightness(0.5);
-  transition: filter 0.4s;
-}
-
-img:hover {
-  filter: brightness(1);
+/* Reduce the blur for a less intense effect */
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(150, 138, 138, 0.3); /* Adjust opacity as needed */
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Reduced blur value */
 }
