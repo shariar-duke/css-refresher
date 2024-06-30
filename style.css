@@ -5,48 +5,26 @@
 }
 
 body {
+  background-color: bisque;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: aquamarine;
 }
 
-h2 {
-  margin-bottom: 6px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust gap between images */
+  flex-wrap: wrap;
 }
 
-.card {
-  background-color: #fff;
-  width: 400px;
-  padding: 22px 30px;
-  border-radius: 5px;
-}
-
-#check {
-  display: none;
-}
-
-label {
-  display: inline-block;
-  margin: 10px 0px;
-  cursor: pointer;
-  color: white;
-  background-color: rgb(72, 113, 97);
-  padding: 4px 12px;
-  border-radius: 3px;
-}
-
-.content {
-  display: none;
-}
-
-/* check box and content holo sibling tai ei syntax lekha jay  */
-#check:checked ~ .content {
-  display: block;
-}
-
-/* checkbox input and lable o eki level a ase mane sibling  */
-#check:checked ~ label {
-  display: none;
+.container > img {
+  /* height: 400px;
+  width: 400px;  */
+  height: 420px;
+  width: 420px;
+  object-fit: fill; /* Ensures image covers entire container without stretching */
+  object-position: center; /* Center the image within the container */
 }
