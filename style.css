@@ -4,24 +4,46 @@
   box-sizing: border-box;
 }
 
-.bg-img {
-  background-image: url("./images/bg3.jpg");
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800; /* Bold style */
 }
 
-/* Reduce the blur for a less intense effect */
-.blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  background-color: rgba(150, 138, 138, 0.3); /* Adjust opacity as needed */
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(5px); /* Reduced blur value */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Ensures all cards grow to fill available space */
+  overflow: hidden; /* Hide overflow content */
+  padding: 10px 40px;
+  gap: 12px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+/* Multi-line text truncation */
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 8; /* Number of lines to show before truncating */
+  text-overflow: ellipsis;
+}
+
+/* this is important to place the button at the very bottom */
+.btn {
+  margin-top: auto;
 }
